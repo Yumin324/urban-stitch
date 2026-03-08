@@ -1,0 +1,308 @@
+====================================
+URBAN STITCH - QUICK START GUIDE
+====================================
+
+📋 REQUIREMENTS
+- XAMPP (Apache + MySQL)
+- Modern web browser
+- Internet connection (for Unsplash images)
+
+🚀 SETUP STEPS
+
+1. START XAMPP
+   - Open XAMPP Control Panel
+   - Start Apache
+   - Start MySQL
+
+2. CREATE DATABASE
+   - Go to http://localhost/phpmyadmin
+   - Create database: urbanstitch_store
+   - Import database.sql file
+
+3. ACCESS WEBSITE
+   - Main Site: http://localhost/Urban%20Stitch/
+   - User Login: http://localhost/Urban%20Stitch/login.php
+   - User SignUp: http://localhost/Urban%20Stitch/signup.php
+   - Setup Guide: http://localhost/Urban%20Stitch/SETUP.php
+   - Admin Panel: http://localhost/Urban%20Stitch/admin/
+
+4. ADMIN LOGIN
+   Username: admin
+   Password: admin123
+
+5. USER REGISTRATION
+   Users can create accounts at signup.php
+   After registration, users can login and track orders
+
+====================================
+COMPLETE FEATURE LIST
+====================================
+
+✅ MAIN WEBSITE (5 Pages)
+   - Home Page (index.php)
+   - Shop Page with products (shop.php)
+   - About Us (about.php)
+   - Contact Form (contact.php)
+   - Shopping Cart (cart.php)
+
+✅ USER AUTHENTICATION
+   - User SignUp (signup.php)
+   - User Login (login.php)
+   - User Profile (profile.php)
+   - Order History (my-orders.php)
+   - Logout (logout.php)
+
+✅ ADMIN PANEL (Full CRUD)
+   - Dashboard with statistics
+   - Products Management (Create, Read, Update, Delete)
+   - Categories Management (Create, Read, Update, Delete)
+   - Orders Management (View, Update Status, Delete)
+   - Secure authentication
+
+✅ SHOPPING FEATURES
+   - Add to cart functionality
+   - Cart persists with localStorage
+   - Update quantities
+   - Remove items
+   - Checkout with customer details
+   - Order placement
+
+✅ SEARCH & FILTER
+   - Search products by name/description
+   - users (registered customers)
+   - orders (customer orders with user_id
+   - Combine search and filters
+
+✅ DATABASE (MySQL)
+   Tables:
+   - products (with all product details)
+   - categories (product categories)
+   - orders (customer orders)
+   - order_items (order details)
+   - admins (admin users)
+
+✅ DML OPERATIONS
+   - SELECT: Read all data
+   - INSERT: Create new records
+   - UPDATE: Modify existing records
+   - DELETE: Remove records
+
+✅ DESIGN
+   - Fully responsive (mobile, tablet, desktop)
+   - Sri Lankan t with improved authentication pages
+   - Professional styling with gradient backgrounds
+   - User profile dashboard
+   - Professional styling
+   - No comments in code
+
+✅ IMAGES
+   - 12 pre-loaded products
+   - Unsplash high-quality images
+   - Sri Lankan traditional wear theme
+
+====================================
+FILE STRUCTURE
+====================================
+
+Urban Stitch/
+├── admin/
+│   ├── includes/
+│   │   ├── header.php
+│   │   └── footer.php
+│   ├── index.php
+│   ├── products.php
+│   ├── categories.php
+│   ├── orders.php
+│   ├── get_order_details.php
+│   ├── login.php
+│   ├── logout.php
+│   └── auth.php
+├── api/
+│   └── place_order.php
+├── assets/
+│   ├── css/
+│   │   └── style.css
+│   └── js/
+│       └── main.js
+├── config/
+│   └── database.php
+├── includes/
+│   ├── header.php
+│   └── footer.php
+├── index.php
+├── shop.php
+├── about.php
+├── login.php
+├── signup.php
+├── logout.php
+├── profile.php
+├── my-orders.php
+├── contact.php
+├── cart.php
+├── database.sql
+├── README.md
+├── SETUP.php
+└── QUICKSTART.txt (this file)
+
+====================================
+SAMPLE DATA INCLUDED
+====================================
+
+Categories (5):
+1. Kandyan Sarees
+2. Batik Wear
+3. Casual Wear
+4. Traditional Wear
+5. Accessories
+
+Products (12):
+1. Royal Kandyan Bridal Saree - LKR 25,000
+2. Traditional Osariya Set - LKR 18,500
+3. Peacock Batik Dress - LKR 4,500
+4. Floral Batik Sarong - LKR 2,800
+5. Batik Shirt - Mens - LKR 3,200
+6. Cotton Handloom Dress - LKR 3,500
+7. Linen Tunic Top - LKR 2,900
+8. Traditional Nil Diya Set - LKR 8,500
+9. Wedding Saree Collection - LKR 32,000
+10. Handcrafted Silver Jewelry - LKR 5,500
+11. Beaded Handbag - LKR 1,800
+12. Traditional Hair Accessories - LKR 950
+
+====================================
+TESTING CHECKLIST
+====================================
+
+Main Website:
+□ Browse products on home page
+□ Navigate to shop page
+□ Search for products
+□ Filter by category
+□ Add products to cart
+User Authentication:
+□ Register new account
+□ Login with credentials
+□ View user profile
+□ Update profile information
+□ Change password
+□ View order history
+□ Track order status
+□ Logout
+
+□ Update cart quantities
+□ Remove items from cart
+□ Complete checkout process
+□ View about page
+□ Submit contact form
+
+Admin Panel:
+□ Login with admin credentials
+□ View dashboard statistics
+□ Create new product
+□ Edit existing product
+□ Delete product
+□ Create new category
+□ Edit category
+□ Delete category
+□ View orders
+□ Update order status
+□ View order details
+
+====================================
+TROUBLESHOOTING
+====================================
+
+Problem: Can't access website
+Solution: 
+- Ensure XAMPP Apache is running
+- Check URL: http://localhost/Urban%20Stitch/
+
+Problem: Database connection error
+Solution:
+- Ensure MySQL is running in XAMPP
+- Verify database name is "urbanstitch_store"
+- Check config/database.php settings
+
+Problem: Images not loading
+Solution:
+- Check internet connection
+- Unsplash URLs require active internet
+
+Problem: Can't login to admin
+Solution:
+- Use credentials: admin / admin123
+- Clear browser cache
+- Check session in browser
+
+Problem: Cart not working
+Solution:
+- Enable localStorage in browser
+- Clear browser cache
+- Check browser console for errors
+
+====================================
+CUSTOMIZATION TIPS
+====================================
+
+1. Change Colors:
+   - Edit CSS variables in assets/css/style.css
+   - Primary color: --primary-color
+   - Secondary color: --secondary-color
+
+2. Add More Products:
+   - Login to admin panel
+   - Go to Products
+   - Click "Add New Product"
+   - Use Unsplash URLs for images
+
+3. Modify Shipping Cost:
+   - Edit assets/js/main.js
+   - Change shipping value (currently 500)
+
+4. Update Contact Info:
+   - Edit includes/footer.php
+   - Edit contact.php
+
+5. Change Admin Password:
+   - Login to phpMyAdmin
+   - Browse admins table
+   - Update password (use password_hash)
+
+====================================
+SUPPORT & DOCUMENTATION
+====================================
+
+For detailed documentation, see:
+- User registration & authentication
+✅ User profile & order tracking
+✅ Full CRUD in admin panel
+✅ Shopping cart with localStorage
+✅ Category filtering
+✅ Product search
+✅ MySQL database with users table
+✅ All DML operations
+✅ Working Unsplash images (updated URLs)
+✅ Sri Lankan themed content
+✅ Responsive design with improved UI
+✅ Modern authentication pagesadmin123
+
+====================================
+PROJECT COMPLETED ✅
+====================================
+
+All requirements fulfilled:
+✅ 5+ main pages
+✅ Full CRUD in admin panel
+✅ Shopping cart with localStorage
+✅ Category filtering
+✅ Product search
+✅ MySQL database
+✅ All DML operations
+✅ Unsplash images
+✅ Sri Lankan themed content
+✅ Responsive design
+✅ No comments in code
+
+Ready to use!
+Visit: http://localhost/Urban%20Stitch/SETUP.php
+====================================
